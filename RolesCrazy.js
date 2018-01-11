@@ -60,6 +60,7 @@ RolesCrazy.on(`message`, message => {
 
 RolesCrazy.on(`guildCreate`, guild => {
 
+    //Everytime the bot is added to a new guild it crashes but if you run the start.sh it will auto reload
     guild.owner.send(`I've been added to your discord, i just wanted to say thank you. here is some basic info on how to use the bot:\n**1)** The default prefix is \`\`${PREFIX}\`\`\n**2)** Commands don't work in Direct Messages\n**3)** Support server is: https://discord.gg/5YPBdM3`);
 	var time = new Date();
     console.log(`[${time.getHours() + `:` + time.getMinutes() + `:` + time.getSeconds()}] I was added to ${guild.name} (ID: ${guild.id}) - Member Count: ${guild.memberCount}`);
